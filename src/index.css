@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+   .btn{
+      @apply text-white font-bold bg-violet-800 my-1 px-2 py-1 rounded-lg active:bg-violet-950 w-9 flex justify-center items-center
+   }
+}
+
+.cont{
+   min-height: 70vh;
+}

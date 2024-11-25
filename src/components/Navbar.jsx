@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom"
 
 const Navbar = () => {
   return (
@@ -6,11 +7,27 @@ const Navbar = () => {
       <p className="flex flex-row items-center">
          <p className="font-bold text-xl sm:text-2xl">&lt; iTask /&gt;</p>
       </p>
+      
       <ul className="flex gap-3">
-         <li><a href="#" className="active:font-bold sm:text-xl">Home</a></li>
-         <li><a href="#" className="active:font-bold sm:text-xl">Contact</a></li>
-         <li><a href="#" className="active:font-bold sm:text-xl">About</a></li>
+         <li className="active:font-bold sm:text-xl">
+            <NavLink className={(e) => {return e.isActive?"underline":""}} to="/" >
+               Home
+            </NavLink>
+         </li>
+         
+         <li className="active:font-bold sm:text-xl">
+            <NavLink className={(e) => {return e.isActive?"underline":""}} to="/contact" >
+               Contact
+            </NavLink>
+         </li>
+         
+         <li className="active:font-bold sm:text-xl">
+            <NavLink className={(e) => {return e.isActive?"underline":""}} to="/about" >
+               About
+            </NavLink>
+         </li>
       </ul>
+      
     </nav>
   );
 };

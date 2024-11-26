@@ -85,6 +85,11 @@ class Question extends React.Component {
 npm install react-router-dom
 ```
 
+- import:
+```
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+```
+
 - paste it  in main.jsx
 ```
 import { StrictMode } from 'react'
@@ -138,7 +143,7 @@ import { NavLink } from "react-router-dom"
 <NavLink className={(e) => {return e.isActive?"underline":""}} to="/contact" > Contact </NavLink>
 ```
 
-- start the server
+### start the server
 ```
 npm run dev
 ```
